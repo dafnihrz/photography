@@ -28,18 +28,19 @@
         margin-top: 30px;
     }
     h1{
-        text-align: center;
         font-family: 'Montserrat', sans-serif;
         font-size: 90px;
         color: white;
-        left: 0;
-        line-height: 100px;
-        margin-top: -50px;
-        position: absolute;
-        text-align: center;
-        top: 50%;
-        width: 100%;
     }
+    .container {
+    height: 100%;
+    width: 100%;
+    display:block;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    }
+    
     #navbar {
         font-family: 'Work Sans', sans-serif;
         font-size: 17px;
@@ -71,7 +72,9 @@
     <div id="navbar">
         <ul id="menuBar"></ul>
     </div>
-    <h1>simply create.</h1>
+    <div class="container">
+        <h1>simply create.</h1>
+      </div>
     <footer>
         <a id="vLink1"><strong> HTML </strong> Valid! </a> |
         <a href="https://dafnihrz.github.io/website/projects">Home</a> |
