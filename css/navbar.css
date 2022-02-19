@@ -1,0 +1,17 @@
+#navbar {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    width: 90vw;
+    letter-spacing: 1.5px;
+}
+#navbar a {
+    text-decoration: none;
+    color: white;
+    padding-right: 3em;
+    position: relative;
+    transition: all ease-in-out 250ms;
+}
+#navbar a:hover{
+    opacity: 25%;
+}
