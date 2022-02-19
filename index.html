@@ -23,28 +23,37 @@
     body{
         margin-top: 30px;
     }
+    section{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }    
     h1{
         text-align: center;
         font-family: 'Montserrat', sans-serif;
         font-size: 86px;
         letter-spacing: 1.5px;
         color: white;
-        left: 0;
-        line-height: 100px;
-        margin-top: -50px;
-        position: absolute;
-        text-align: center;
-        top: 50%;
-        width: 100%;
         opacity: 0;
         animation: fadeIn 3.5s;
-        animation-delay: 2s;
+        animation-delay: 1.5s;
         animation-fill-mode: forwards;
     }
-
         @keyframes fadeIn {
         from { opacity: 0; }
         to { opacity: 1; }
+    }
+    p{
+        text-align: center;
+        font-size: 30px;
+        color: #ffff;
+        font-family: 'Montserrat', sans-serif;
+        opacity: 0;
+        animation: fadeIn 2.5s;
+        animation-delay: 4.5s;
+        animation-fill-mode: forwards;
     }
 </style>
 </head>
@@ -52,6 +61,9 @@
     <div id="navbar">
         <ul id="menuBar"></ul>
     </div>
-    <h1>simply create.</h1>
+    <section>
+        <h1>simply create.</h1>
+        <p>Coming soon...</p>
+    </section>
 </body>
 </html>
