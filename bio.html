@@ -14,28 +14,91 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/navbar.css"> 
-    <title>Photography</title>
+    <title>Bio</title>
 <style>
-    html {    
-        background: url('images/bio.jpg') no-repeat center fixed;     
-        background-size: cover;
+    * {
+        box-sizing: border-box;
     }
-    body{
-        margin-top: 30px;
-    }
-    h1{
-        text-align: center;
+    html{
+        overflow: scroll;
         font-family: 'Montserrat', sans-serif;
         color: white;
     }
+    body {
+        position: fixed;
+        background: rgba(0, 0, 0, 0.4) url('images/bio.jpg') no-repeat center fixed;     
+        background-size: cover;
+        background-blend-mode: darken;
+    } 
+    h1{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 50px;
+        color: white;
+    }
+    .column {
+        float: left;
+        padding: 10px;
+    }
+    .column.side {
+        margin-left: 50px;
+        width: 22%;
+    }
+    .column.main {
+        width: 65%;
+        margin-left: 20px;
+    }
+    .column.main p{
+        line-height: 2;
+    }
+    .row{
+        position: fixed;
+        padding-left: 0px;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+    }
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    @media screen and (max-width: 890px) {
+        .row{
+            padding-left: 0px;
+        }
+        .column.main{
+            padding: 30px;
+        }
+        .column.side{
+            padding-left: 30px;
+        }
+        .column.side, .column.main {
+            overflow-wrap: break-word;
+            margin-left: 0px;
+            width: 100%;
+        }
+    }
 </style>
 </head>
-<body>
-    <div id="navbar">
-        <ul id="menuBar"></ul>
-    </div>
-    <h1>bio.</h1>
 
+<body>
+        <div id="navbar">
+            <ul id="menuBar"></ul>
+        </div>
+        <div class="row">
+            <div class="column side">
+            <h4>contact:</h4>
+            <p>email@example.com</p>
+            <h4>based in:</h4>
+            <p>Location</p>
+            </div>
+            
+            <div class="column main">
+            <h1>bio</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+            </div>
+        </div>   
 <script src="js/navbar.js"></script>
 </body>
 </html>
