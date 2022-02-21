@@ -1,4 +1,5 @@
 #navbar {
+    margin-top: 30px;
     font-family: 'Work Sans', sans-serif;
     font-size: 17px;
     font-weight: 300;
@@ -7,7 +8,7 @@
 }
 #navbar a {
     text-decoration: none;
-    color: white;
+    color:unset;
     padding-right: 3em;
     position: relative;
     transition: all ease-in-out 250ms;
@@ -15,7 +16,7 @@
 #navbar a:hover{
     opacity: 25%;
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 890px) {
     #navbar{
         text-align: center;
     }

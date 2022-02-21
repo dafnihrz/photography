@@ -55,20 +55,51 @@
         justify-content: center;
         align-items: center;
         top: 30%;
-
     }
     .row:after {
         content: "";
         display: table;
         clear: both;
     }
+    .social{
+        display: inline-block;
+        margin: 0px;
+        padding-bottom: 10px;
+    }
+    .social img:hover{
+        opacity: 30%;
+        transition: all 0.5s;
+    }
+    .social img{
+        margin-right: 10px;
+        width: 25px;
+        height: 25px;
+    }
+    footer{
+        position: absolute;
+        padding: 20px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color: white;
+        text-align: center;
+    }
+    @media screen and (max-height: 550px) {
+        .row{
+            position: relative;
+        }
+        footer{
+            margin-top: 30px;
+            position: relative;
+        }
+    }
     @media screen and (max-width: 890px) {
         .row{
-            position: unset;
-            top: 0%;
+            position: relative;
         }
         .column.main{
-            padding: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
         }
         .column.side{
             padding-left: 30px;
@@ -78,26 +109,34 @@
             margin-left: 0px;
             width: 100%;
         }
+        footer{
+            position: unset;
+        }
     }
 </style>
 </head>
-
 <body>
-        <div id="navbar">
-            <ul id="menuBar"></ul>
-        </div>
+    <div id="navbar">
+        <ul id="menuBar"></ul>
+    </div>
         <div class="row">
             <div class="column side">
-                <h4>contact:</h4>
-                    <p>email@example.com</p>
                 <h4>based in:</h4>
                     <p>Location</p>
+                <h4>contact:</h4>
+                    <p>email@example.com</p>
             </div>
             <div class="column main">
                 <h1>bio</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
             </div>
         </div>
+    <footer>
+        <div class="social">
+            <a href="instagram.com"><img class=“sm_icon“ src="images/instagram.png" alt="Instagram"></a>
+            <a href="facebook.com"><img class=“sm_icon“ src="images/facebook.png" alt="Facebook"></a>
+        </div>
+    </footer>
 <script src="js/navbar.js"></script>
 </body>
 </html>
