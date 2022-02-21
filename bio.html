@@ -20,12 +20,12 @@
         box-sizing: border-box;
     }
     html{
-        overflow: scroll;
+        overflow-y: scroll;
         font-family: 'Montserrat', sans-serif;
         color: white;
     }
     body {
-        position: fixed;
+        margin-top: 30px;
         background: rgba(0, 0, 0, 0.4) url('images/bio.jpg') no-repeat center fixed;     
         background-size: cover;
         background-blend-mode: darken;
@@ -51,12 +51,11 @@
         line-height: 2;
     }
     .row{
-        position: fixed;
-        padding-left: 0px;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%)
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        top: 30%;
+
     }
     .row:after {
         content: "";
@@ -65,7 +64,8 @@
     }
     @media screen and (max-width: 890px) {
         .row{
-            padding-left: 0px;
+            position: unset;
+            top: 0%;
         }
         .column.main{
             padding: 30px;
@@ -88,17 +88,16 @@
         </div>
         <div class="row">
             <div class="column side">
-            <h4>contact:</h4>
-            <p>email@example.com</p>
-            <h4>based in:</h4>
-            <p>Location</p>
+                <h4>contact:</h4>
+                    <p>email@example.com</p>
+                <h4>based in:</h4>
+                    <p>Location</p>
             </div>
-            
             <div class="column main">
-            <h1>bio</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+                <h1>bio</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
             </div>
-        </div>   
+        </div>
 <script src="js/navbar.js"></script>
 </body>
 </html>
