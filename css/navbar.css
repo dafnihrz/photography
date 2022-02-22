@@ -5,12 +5,12 @@
     font-weight: 300;
     width: 90vw;
     letter-spacing: 1.5px;
+    text-transform: uppercase;
 }
 #navbar a {
     text-decoration: none;
     color:unset;
     padding-right: 3em;
-    position: relative;
     transition: all ease-in-out 250ms;
 }
 #navbar a:hover{
@@ -19,5 +19,9 @@
 @media screen and (max-width: 890px) {
     #navbar{
         text-align: center;
+    }
+    #navbar a{
+        padding-left: 1em;
+        padding-right: 1em;
     }
 }
