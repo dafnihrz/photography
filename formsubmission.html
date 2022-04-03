@@ -21,78 +21,32 @@
     }
     html{
         overflow-y: scroll;
+        overflow-x: hidden;
         font-family: 'Montserrat', sans-serif;
         text-overflow: inherit;
     }
-    h1{
+    div#content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        padding: 30px;
+    }
+    h1, p{
+        text-align: center;
         font-family: 'Montserrat', sans-serif;
-        font-size: 50px;
+        font-size: 25px;
+    }
+    h1{
         text-transform: uppercase;
     }
     p{
-        font-size: 20px;
         line-height: 1.5;
     }
-    .column {
-        float: left;
-        text-align: center;
-        width: 50%;
-        padding: 60px;
-    }
-    .row{
-        padding: 50px;
-        position: absolute;
-        justify-content: center;
-        align-items: center;
-        top: 20%;
-    }
-    .row:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-    footer{
-        position: absolute;
-        padding: 20px;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        text-align: center;
-    }
-    #hexagon {
-        z-index: -1;
-        width: 200px;
-        height: 288.675px;
-        background: red;
-        position: absolute;
-        
-    }
-    #hexagon::before {
-        content: "";
-        position: absolute;
-        top: -28.8675px;
-        left: 0;
-        width: 0;
-        height: 0;
-        border-left: 150px solid transparent;
-        border-right: 150px solid transparent;
-        border-bottom: 28.8675px solid red;
-    }
-    #hexagon::after {
-        content: "";
-        position: absolute;
-        bottom: -28.8675px;
-        left: 0;
-        width: 0;
-        height: 0;
-        border-left: 150px solid transparent;
-        border-right: 150px solid transparent;
-        border-top: 28.8675px solid red;
-    }
     @media screen and (max-height: 550px) {
-        .row{
-            margin: 20px;
-            position: relative;
+        div#content{
+            margin-top: 50px;
         }
         footer{
             margin-top: 30px;
@@ -100,16 +54,6 @@
         }
     }
     @media screen and (max-width: 890px) {
-        .row{
-            position: relative;
-            padding: 0px;
-        }
-        .column {
-            overflow-wrap: break-word;
-            padding-top: 0px;
-            width: 100%;
-            margin: 0px
-        }
         footer{
             position: unset;
         }
@@ -123,19 +67,10 @@
         <a href="contact">Contact</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
       </div>
-
-        <div class="row">
-            <div class="column">
+            <div id="content">
                 <h1>Thank you for reaching out to us.</h1>
-            </div>
-
-            <div class="column">
                 <p>We just received your message and will get back to you within 2 business days.</p>
-                <p>Meanwhile, make sure to follow us on social media and check out the rest of the website!</p>
-                </p>
             </div>
-        </div>
-    
     <footer>
         <div class="back">
 
