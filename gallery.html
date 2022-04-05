@@ -6,13 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/navbar.css"> 
     <title>Gallery</title>
 <style>
@@ -21,66 +18,58 @@
     }
     html {
         overflow-y: scroll;
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'JetBrains Mono', sans-serif;
     }
     .title{
+        margin-top: 50px;
         text-transform: uppercase;
         text-align: center;
+        font-family: 'Montserrat', sans-serif;
     }
     .row{
-        position: absolute;
-        left: 0;
-        width: 100%;
-        margin-top: 30px;
-        color: white;
+        margin-top: 1.5in;
+        margin-bottom: 1in;
+        margin-right: 25%;
+        margin-left: 25%;
     }
-    .column1 h1, .column2 h1,.column3 h1, .column4 h1{
-        text-transform: uppercase;
-        letter-spacing: 5px;
+    img{
+        width: 80px;
+        height: auto;
     }
-    .row a{
-        text-decoration: none;
-        color: white;
-    }
-    .row a:hover{
-        opacity: 0.35;
-        transition: all 0.2s;
-    }
-    .column1, .column2, .column3, .column4{
-        display: grid;
-        float: left;
-        height: 325px;
-        width: 50%;
-        padding: 120px;
+    .column {
+        margin-left: 25px;
+        display: inline-block;
+        width: 27%;
+        padding: 5px;
         text-align: center;
     }
-    .column1{
-        background: url('images/photo.jpg') no-repeat; 
-        background-position-y: -200px;
+    .column p{
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 400;
     }
-    .column2{
-        background: rgba(0, 0, 0, 0.3) url('images/design.jpg') no-repeat; 
-        background-position-y: -200px;
-        background-blend-mode: darken;
+    img:hover {
+        transform: rotate(0deg) scale(1.25);
+        opacity: 0.6;
+        cursor: pointer;
+        transition: all ease-in-out 250ms;
     }
-    .column3{
-        background: url('images/webdesign.jpg') no-repeat; 
-        background-position-y: -1750px;
-    }
-    .column4{
-        background: url('images/animation.jpg') no-repeat; 
-        background-position-y: 0px;
-    }
-    @media screen and (max-width: 890px) {
-        .row{
-            position: absolute;
-            bottom: unset;
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
         }
-        .column1, .column2, .column3, .column4{
-            float: unset;
+    @media screen and (max-width: 950px) {
+        .row{
+            margin-top: 0.5in;
+            margin-bottom: 0.5in;
+            margin-left: 40%;
+            margin-right: 40%;
+        }
+        .column{
+            float: left;
             width: 100%;
-            padding: 30px;
-            height: unset;
+            margin-left: 0;
         }
     }    
 </style>
@@ -97,22 +86,25 @@
         <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776</a>
       </div>
     </div>
+
     <h1 class="title">Gallery</h1>
     <hr style="width: 5%;">
-    <div class="row">
-        <div class="column1">
-            <h1><a href="photo">Photography</a></h1>
-        </div>
-        <div class="column2">
-            <h1><a href="design">Graphic Design</a></h1>
-        </div>
-        <div class="column3">
-            <h1><a href="web">Web Design</a></h1>
-        </div>
-        <div class="column4">
-            <h1><a href="animation">Animation</a></h1>
-        </div>
-    </div>
+
+            <div class="row">
+                <div class="column">
+                <img src="images/folder.png" alt="Folder">
+                <p>photo</p>
+                </div>
+                <div class="column">
+                <img src="images/folder.png" alt="Folder">
+                <p>design</p>
+                </div>
+                <div class="column">
+                <img src="images/folder.png" alt="Folder">
+                <p>web</p>
+                </div>
+            </div>
+
     <script src="js/navbar.js"></script>
 </body>
 </html>
