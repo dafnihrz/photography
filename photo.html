@@ -16,18 +16,28 @@
     * {
         box-sizing: border-box;
     }
-    html{
-        overflow-y: hidden;
+    body{
+        overflow-y: scroll;
     }
     .title{
-        font-size: 12px;
+        font-size: 13px;
+        color: rgb(143, 143, 143);
         font-family: 'Montserrat', sans-serif;
-        color: rgb(185, 185, 185);
         text-transform: uppercase;
+        font-weight: 200;
         margin-top: 80px;
         margin-left: 9.5%;
         margin-right: 9.5%;
         margin-bottom: -5px;
+    }
+    footer{
+        padding: 2px;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 200;
+        font-size: 12px;
+        color: rgb(143, 143, 143);
     }
     .row {
         display: flex;
@@ -47,17 +57,22 @@
         width: 100%;
     }
     /* Responsive layout - makes a two column-layout instead of four columns */
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 980px) {
         html{
             overflow-y: scroll;
         }
         .title{
+            margin-left: 13%;
+            margin-right: 13%;
+        }
+        .row {
+            padding: 10px;
             margin-left: 10%;
             margin-right: 10%;
         }
         .column {
-            flex: 50%;
-            max-width: 50%;
+            flex: 100%;
+            max-width: 100%;
         }
     }
     /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
@@ -66,8 +81,14 @@
             overflow-y: scroll;
         }
         .title{
-            margin-left: 11%;
-            margin-right: 11%;
+            margin-left: 2%;
+            margin-right: 2%;
+            margin-bottom: 5px;
+        }
+        .row {
+            padding: 0;
+            margin-left: 0;
+            margin-right: 0;
         }
         .column {
             flex: 100%;
@@ -101,7 +122,9 @@
             <img src="photos/IMG_0258.jpg">
           </div>
       </div>
-
+      <footer>
+        <p>All content copyright © 2022 Dafni</p>
+      </footer>
 <script src="js/navbar.js"></script>
 </body>
 </html>
