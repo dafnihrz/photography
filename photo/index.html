@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/navbar.css"> 
+    <title>Photo</title>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    html{
+        font-family: 'JetBrains Mono', monospace;
+    }
+    h1{
+        margin-top: 50px;
+        margin-bottom: 21px;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+    }
+    footer{
+        padding: 10px;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 200;
+        font-size: 12px;
+        color: rgb(143, 143, 143);
+    }
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+        margin-top: 1.5%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .column {
+        flex: 33.3%;
+        max-width: 33.3%;
+        padding: 10px;
+    }
+    .column img {
+        vertical-align: middle;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        filter: grayscale(100%);
+    }
+    /*Object position*/
+    #fireworks{
+        object-position: 40% 100%;
+    }
+    /*Fade In*/
+    .container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        transition: all ease-in-out .4s;
+        background-color: rgb(0,0,0);
+    }
+    .container:hover .overlay {
+        opacity: 0.7;
+    }
+    .container:hover .text{
+        opacity: 1;
+    }
+    .text{    
+        opacity: 0;
+        font-weight: 100;
+        color: white;
+        font-size: 18px;
+        text-transform: lowercase;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all ease-in-out .4s;
+        text-align: center;
+    }
+    @media screen and (max-width: 980px) {
+        html{
+            overflow-y: scroll;
+        }
+        .title{
+            margin-left: 13%;
+            margin-right: 13%;
+        }
+        .row {
+            padding: 10px;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        .column {
+            flex: 100%;
+            max-width: 100%;
+        }
+        .container:hover .overlay {
+            opacity: 0.65;
+        }
+        .container:hover .text{
+            opacity: 1;
+        }
+        .overlay{
+            opacity: 0.65;
+        }
+        .text{
+            opacity: 1;
+        }
+    }
+    @media screen and (max-width: 720px) {
+        html{
+            overflow-y: scroll;
+        }
+        .title{
+            margin-left: 2%;
+            margin-right: 2%;
+            margin-bottom: 5px;
+        }
+        .row {
+            padding: 0;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="navbar" id="myTopnav">
+        <div class="topnav-left">
+          <a class="active" href="">Home</a>
+        </div>
+        <div class="topnav">
+          <a href="gallery">Gallery</a>
+          <a href="bio">Bio</a>
+          <a href="contact">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+    </div>
+    <h1>Collections</h1>
+    <hr style="width: 5%;">
+      <div class="row">
+          <div class="column">
+              <div class="container">
+                <img id="philly" src="../media/c1.jpg">
+                <a href="philadelphia">
+                    <div class="overlay"></div>
+                    <div class="text">I</div>
+                </a>
+            </div>
+          </div>
+          <div class="column">
+            <div class="container">
+                <img id="fireworks" src="../media/c2.jpg">
+                <a href="fireworks">
+                    <div class="overlay"></div>
+                    <div class="text">II</div>
+                </a>
+            </div>
+          </div>
+          <div id="right" class="column">
+            <div class="container">
+                <img src="../media/c3.jpg">
+                <a href="">
+                    <div class="overlay"></div>
+                    <div class="text">III</div>
+                </a>
+            </div>
+          </div>
+      </div>
+      <footer>
+        <p>All content copyright © 2022 Dafni</p>
+      </footer>
+<script src="../js/navbar.js"></script>
+</body>
+</html>

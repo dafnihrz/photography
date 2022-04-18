@@ -8,8 +8,8 @@
   overflow: hidden;
   font-family: 'JetBrains Mono', sans-serif;
   padding: 10px;
+  padding-top: 0;
 }
-
 .navbar a {
   float: left;
   color: unset;
@@ -21,7 +21,6 @@
   font-weight: 200;
   font-size: 17px;
 }
-
 .navbar a:hover, .dropdown:hover, .dropbtn {
   opacity: 0.3;
   transition: all ease-in-out 250ms;

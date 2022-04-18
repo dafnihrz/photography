@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/navbar.css"> 
+    <link rel="stylesheet" href="style.css">
+    <title>Photo</title>
+<style>
+    /* Responsive layout */
+    @media screen and (max-width: 720px) {
+        html{
+            overflow-y: scroll;
+        }
+        .title{
+            margin-top: 7%;
+            margin-left: 2%;
+            margin-right: 2%;
+            margin-bottom: 5px;
+        }
+        .row {
+            padding: 0;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .column {
+            flex: 100%;
+            max-width: 100%;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="navbar" id="myTopnav">
+        <div class="topnav-left">
+          <a class="active" href="">Home</a>
+        </div>
+        <div class="topnav">
+          <a href="gallery">Gallery</a>
+          <a href="bio">Bio</a>
+          <a href="contact">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+    </div>
+      <p class="title">4th of July | Philadelphia</p>
+      <div class="row">
+          <div class="column">
+              <img src="images/IMG_0265.jpeg" alt="Building">
+              <img src="images/IMG_0238.jpg" alt="Building">
+          </div>
+          <div class="column">
+            <img src="images/IMG_0245.jpg" alt="Building">
+          </div>
+          <div id="right" class="column">
+            <img src="images/IMG_0272.jpg" alt="Building">
+            <img src="images/IMG_0258.jpg" alt="Building">
+          </div>
+      </div>
+      <footer>
+        <a href=""class="back"><span>Back</span></a>
+        <hr class="divider">
+        <p>All content copyright © 2022 Dafni</p>
+      </footer>
+<script src="../js/navbar.js"></script>
+</body>
+</html>
