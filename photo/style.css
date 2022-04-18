@@ -49,7 +49,7 @@ body{
     left: 0;
 }
 .divider{
-    width: 5%;
+    width: 8%;
     margin-top: 15px;
     margin-bottom: 15px;
 }
@@ -83,6 +83,9 @@ footer, footer a{
 @media screen and (max-width: 980px) {
     html{
         overflow-y: scroll;
+    }
+    .divider{
+        width: 20%;
     }
     .title{
         margin-top: 2%;
