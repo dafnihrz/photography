@@ -98,4 +98,7 @@ footer, footer a{
         flex: 100%;
         max-width: 100%;
     }
+    footer, footer a{
+        padding: 20px;
+    }
 }
